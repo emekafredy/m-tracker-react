@@ -1,0 +1,40 @@
+{
+  "name": "m-tracker-react",
+  "version": "1.0.0",
+  "description": "A company app that helps employees forward maintenance/repair requests to the maintenance department",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emekafredy/m-tracker-react.git"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "Emeka Chinedu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emekafredy/m-tracker-react/issues"
+  },
+  "homepage": "https://github.com/emekafredy/m-tracker-react#readme",
+  "dependencies": {
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
