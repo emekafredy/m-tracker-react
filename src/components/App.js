@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import Navbar from './layout/Navbar';
+import WelcomeBody from './layout/WelcomeBody';
+import Footer from './layout/Footer';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to M-Tracker</h1>
+        <Navbar />
+        <WelcomeBody />
+        <Footer />
       </div>
     )
   }
