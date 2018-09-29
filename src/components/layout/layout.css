@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Kavivanar|Lobster|Merriweather);
+
+body {
+  font-family:Merriweather;
+  line-height:1.5;
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#logout-account {
+  cursor: pointer;
+}
+
+.body-wrapper {
+  min-height:100%;
+  position:relative;
+}
+
+.container {
+  margin:auto;
+  overflow:hidden;
+  width:90%
+}
+
+.centre-div {
+  text-align: center;
+}
+
+a > span.role {
+  background:#5B5B5B;
+  border:1px solid #fff;
+  border-radius:5px;
+  padding:5px 20px
+}
+
+.active {
+  border:1px solid #fff;
+  border-radius:5px;
+  padding:10px 20px
+}
+
+.navbar {
+  background:#1d2951;
+  position:fixed;
+  width:100%;
+  z-index:1
+}
+
+.navbar a {
+  color:#fff;
+  text-decoration:none
+}
+
+#brand {
+  color:#fff;
+  display:inline-block;
+  font-family:Kavivanar;
+  font-size:22px;
+  padding:10px 20px
+}
+
+#brand span {
+  margin:0
+}
+
+.navbar > .nav-links {
+  float:right;
+  font-size:18px;
+  padding-left:0
+}
+
+.navbar > .nav-links > a {
+  color:#fff;
+  display:inline-block;
+  font-size:.9em;
+  margin-top:5px;
+  opacity:0.87;
+  padding:10px 20px;
+  text-decoration:none
+}
+
+.navbar > .nav-links > a:hover {
+  opacity:1
+}
+
+.navbar > #nav-check, .nav-icon  {
+  display:none
+}
+
+#header {
+  background:url(http://res.cloudinary.com/dgbmeqmyf/image/upload/v1527780062/header.png);
+  background-position:center;
+  background-size:cover;
+  border-bottom:5px solid #FF8C00;
+  color:#fff;
+  height:600px;
+  text-align:center
+}
+
+#header h1 {
+  border-bottom:2px solid #FF8C00;
+  margin-bottom:10px;
+  margin-top:200px
+}
+
+.btn-signup {
+  background:#CC7000;
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-size:1em;
+  font-weight:bold;
+  outline:none;
+  padding:15px 5px;
+  transition:.5s;
+  width:200px
+}
+
+.btn-signup:hover {
+  background:#8E4E00;
+  cursor:pointer;
+  transition:.5s
+}
+
+.grid {
+  margin-top:50px
+}
+
+.grid img {
+  width:90px
+}
+
+.box {
+  float:left;
+  padding:10px;
+  text-align:center;
+  width:30%
+}
+
+footer {
+  background:#1d2951;
+  background-repeat: no-repeat;
+  background-position: center top;
+  bottom: -20px;
+  color:#fff;
+  font-family:Kavivanar;
+  height:50px; 
+  line-height: 50px;
+  margin-top:50px;
+  position: relative;
+  text-align:center;
+  width: 100%;
+}
+
+@media(max-width: 550px) {
+  .navbar > .nav-icon {
+    display:inline-block;
+    position:absolute;
+    right:0;
+    top:0;
+  }
+
+  .navbar > .nav-icon > label {
+    display:inline-block;
+    padding:13px
+  }
+
+  .navbar > .nav-icon > label:hover {
+    background-color:rgba(0,0,0,0.3)
+  }
+
+  .navbar > .nav-icon > label > span {
+    border-top:2px solid #eee;
+    display:block;
+    height:7px;
+    width:25px
+  }
+
+  .navbar > .nav-links {
+    background-color:#333;
+    display:block;
+    height:0;
+    left:0;
+    overflow-y:hidden;
+    position:absolute;
+    top:50px;
+    transition:all .3s ease-in;
+    width:100%
+  }
+
+  .navbar > .nav-links > a {
+    display:block;
+    width:100%
+  }
+
+  .navbar > #nav-check:not(:checked) + .nav-links {
+    height:0
+  }
+
+  .navbar > #nav-check:checked + .nav-links {
+    height:auto;
+    overflow-y:auto
+  }
+
+  .active {
+    border:none;
+    display:hidden
+  }
+
+  .mob-active {
+    border:1px solid #fff;
+    display:block;
+    padding:10px 20px
+  }
+
+  .box {
+    float:none;
+    text-align:center;
+    width:100%
+  }
+}
