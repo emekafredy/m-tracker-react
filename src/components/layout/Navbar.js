@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import './layout.css';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
         <div id="brand">
-          <span><a href="index.html">M-Tracker</a></span>
+          <span>
+            <Link to="/">M-Tracker</Link>
+          </span>
         </div>
         <div className="nav-icon">
 
@@ -19,8 +21,8 @@ class Navbar extends Component {
 
         <input type="checkbox" id="nav-check"/>
         <div className="nav-links">
-          <a href="sign-up.html">Sign Up</a>
-          <a href="login.html">Login</a>
+          <Link to="/register" className="auth-links">Sign Up</Link>
+          <Link to="/login" className="auth-links">Login</Link>
         </div>   
       </div>
     );

@@ -45,7 +45,7 @@ a > span.role {
 
 .navbar {
   background:#1d2951;
-  position:fixed;
+  position: relative;
   width:100%;
   z-index:1
 }
@@ -73,7 +73,7 @@ a > span.role {
   padding-left:0
 }
 
-.navbar > .nav-links > a {
+.auth-links {
   color:#fff;
   display:inline-block;
   font-size:.9em;
@@ -150,7 +150,7 @@ footer {
   font-family:Kavivanar;
   height:50px; 
   line-height: 50px;
-  margin-top:50px;
+  margin-top:90px;
   position: relative;
   text-align:center;
   width: 100%;
