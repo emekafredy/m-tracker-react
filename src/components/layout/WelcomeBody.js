@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class WelcomeBody extends Component {
   render() {
@@ -8,7 +9,9 @@ class WelcomeBody extends Component {
           <div className="container">
             <h1>Maintenance Tracker App</h1>
             <h2>Get it Fixed</h2>
-            <button className="btn-signup">Get Started</button>
+            <Link to="/register">
+              <button className="btn-signup">Get Started</button>
+            </Link>
           </div>
         </header>
 
