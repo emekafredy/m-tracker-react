@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   render() {
@@ -17,7 +18,7 @@ class Login extends Component {
         </form>
         <div className="centre-div">
           <p>Don't have an account ?</p>
-          <a href="sign-up.html"> Sign up </a>
+          <Link to="/register"> Sign up </Link>
         </div>
       </div>
     )
