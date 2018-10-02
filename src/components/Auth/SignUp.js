@@ -8,7 +8,8 @@ class SignUp extends Component {
     return (
       <div className="signUp">
         <form id="registerUsers" onSubmit={ this.handleSubmit }> 
-          
+        <input className="input-class" type="text"
+            placeholder="First name" name="firstName" />
         </form>
         <div className="centre-div">
           <p>Already Registered ?</p>
