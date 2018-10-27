@@ -235,13 +235,14 @@ footer {
 /* SIGNUP & LOGIN LAYOUTS */
 .signUp {
   margin-top: 100px;
+  min-height: 70vh;
 }
 
 form > p {
   margin-bottom: 50px;
 }
 
-.signUp Link {
+.links {
   background:rgb(199,189,189);
   color:#1d2951;
   font-weight:bold;
@@ -253,7 +254,7 @@ form > p {
   width:50%;
 }
 
-.signUp Link:hover {
+.links:hover {
   background:rgb(156,145,145);
   cursor:pointer;
   transition:0;
@@ -291,8 +292,8 @@ input[type="submit"] {
   font-size:1em;
   font-weight:bold;
   outline:none;
-  width: 32%;
-  margin: 0px 34% 0 34%;
+  width: 20%;
+  margin: 0px 40% 0 40%;
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -310,16 +311,14 @@ input[type="submit"]:hover {
   cursor:pointer;
 }
 
-.was-validated .input-class:invalid:focus, .input-class.error-outline, .was-validated
-.custom-select:invalid,
-.custom-select.error-outline {
+.error-outline {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .error-message {
-  display: none;
-  width: 100%;
+  width: 32%;
+  margin: auto;
   margin-top: 0.25rem;
   font-size: 80%;
   color: #dc3545;
@@ -340,6 +339,10 @@ input[type="submit"]:hover {
     margin:60px 20% 20px;
     width:60%;
   }
+
+  .error-message {
+    width: 80%;
+  }
 }
 
 @media(max-width: 500px) {
@@ -355,5 +358,9 @@ input[type="submit"]:hover {
   input[type="submit"] {
     margin:60px 20% 20px;
     width:60%;
+  }
+
+  .error-message {
+    width: 100%;
   }
 }
