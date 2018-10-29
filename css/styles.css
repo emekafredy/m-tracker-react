@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Kavivanar|Lobster|Merriweather);
 
-/* PAGE LAYOUT */
 body {
   font-family:Merriweather;
   line-height:1.5;
@@ -235,7 +234,7 @@ footer {
 /* SIGNUP & LOGIN LAYOUTS */
 .signUp {
   margin-top: 100px;
-  min-height: 70vh;
+  min-height: 62vh;
 }
 
 form > p {

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const API = 'http://emeka-m-tracker.herokuapp.com';
+// action
+import { registerUser } from '../../actions/auth';
 
 class SignUp extends Component {
   constructor() {
@@ -20,12 +22,29 @@ class SignUp extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/me/requests');
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.isAuthenticated) {
+      this.props.history.push('/me/requests');
+    }
+    if (nextProps.errors.errors) {
+      this.setState({ errors: nextProps.errors.errors })
+    }
+  }
+
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value })
   }
 
   handleSubmit(event) {
     event.preventDefault();
+
+    const { registerUser } = this.props;
     
     const newUser = {
       firstName: this.state.firstName,
@@ -34,9 +53,7 @@ class SignUp extends Component {
       password: this.state.password
     }
 
-    axios.post(`${API}/api/v1/auth/signup`, newUser)
-      .then(response => console.log(response.data))
-      .catch(error => this.setState({ errors: error.response.data.errors }))
+    registerUser(newUser);
   }
 
   render() {
@@ -99,4 +116,15 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+SignUp.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors,
+});
+
+export default connect(mapStateToProps, { registerUser })(withRouter(SignUp));

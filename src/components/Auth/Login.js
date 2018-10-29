@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import classnames from 'classnames';
-import axios from 'axios';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const API = 'http://emeka-m-tracker.herokuapp.com';
+// action
+import { loginUser } from '../../actions/auth';
 
 class Login extends Component {
   constructor() {
@@ -18,6 +20,21 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/me/requests');
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.isAuthenticated) {
+      this.props.history.push('/me/requests');
+    }
+    if (nextProps.errors.errors) {
+      this.setState({ errors: nextProps.errors.errors })
+    }
+  }
+
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value })
   }
@@ -25,14 +42,14 @@ class Login extends Component {
   handleSubmit(event) {
     event.preventDefault();
     
+    const { loginUser } = this.props;
+
     const registeredUser = {
       email: this.state.email,
       password: this.state.password
     }
 
-    axios.post(`${API}/api/v1/auth/login`, registeredUser)
-      .then(response => console.log(response.data))
-      .catch(error => this.setState({ errors: error.response.data.errors }))
+    loginUser(registeredUser);
   }
 
   render() {
@@ -77,4 +94,15 @@ class Login extends Component {
   }
 }
 
-export default Login;
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors,
+});
+
+export default connect(mapStateToProps, { loginUser })(withRouter(Login));
