@@ -9,6 +9,7 @@ import WelcomeBody from './components/Layout/WelcomeBody';
 import SignUp from './components/Auth/SignUp';
 import Login from './components/Auth/Login';
 import Requests from './components/User/Requests';
+import CreateRequest from './components/User/CreateRequest';
 
 // redux store configuration
 import configureStore from './store/configureStore';
@@ -47,6 +48,7 @@ class App extends Component {
             <Route path='/register' component={ SignUp }/>
             <Route path='/login' component={ Login }/>
             <Route path="/me/requests" component={ Requests } />
+            <Route path="/request/new" component={ CreateRequest } />
             <Footer />
           </div>
         </BrowserRouter>

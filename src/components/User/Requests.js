@@ -31,7 +31,6 @@ class Requests extends Component {
     }
 
     const { requests: { data, message } } = requests;
-    // console.log('REQS', requests)
 
 
     return (

@@ -10,7 +10,7 @@ const API = 'http://emeka-m-tracker.herokuapp.com';
 
 
 // Register User
-export const registerUser = (userData, history) => dispatch => {
+export const registerUser = (userData) => dispatch => {
   axios
     .post(`${API}/api/v1/auth/signup`, userData)
     .then(response => {
@@ -28,7 +28,7 @@ export const registerUser = (userData, history) => dispatch => {
 
 
 // Login User
-export const loginUser = (userData, history) => dispatch => {
+export const loginUser = (userData) => dispatch => {
   axios.post(`${API}/api/v1/auth/login`, userData)
     .then(response => {
       const { token } = response.data;
