@@ -6,7 +6,7 @@ import {
   CLEAR_REQUESTS_DATA
 } from '../actionTypes/requests.types';
 
-const API = 'http://emeka-m-tracker.herokuapp.com';
+const API = 'https://emeka-m-tracker.herokuapp.com';
 
 
 const fetchRequestsLoading = () => {
