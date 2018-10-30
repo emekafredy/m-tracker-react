@@ -6,21 +6,26 @@ import { Link } from 'react-router-dom';
 
 // action
 import { fetchSingleRequest, fetchUserSingleRequest } from '../../actions/request';
+import { processRequest } from '../../actions/processRequest';
+import { fetchAllRequests } from '../../actions/requests';
 
 class SingleRequest extends Component {
   constructor(props) {
     super(props);
     this.state ={};
+
+    this.handleProcess = this.handleProcess.bind(this);
+    this.handleApproval = this.handleApproval.bind(this);
+    this.handleDisapproval = this.handleDisapproval.bind(this);
+    this.handleResolution = this.handleResolution.bind(this);
   }
 
   componentDidMount() {
-    console.log('PROPS', this.props)
     const { 
       fetchSingleRequest,
       fetchUserSingleRequest,
       auth: { user: { user } },
       match: { params: { requestId: searchTerm } },
-      singleRequest
     } = this.props;
 
     if (user.isadmin) {
@@ -28,6 +33,44 @@ class SingleRequest extends Component {
     }
 
     return fetchUserSingleRequest(searchTerm);
+  }
+
+  handleProcess(status) {
+    const { 
+      processRequest,
+      auth: { user: { user } },
+      match: { params: { requestId: searchTerm } },
+      history,
+      fetchAllRequests
+    } = this.props;
+
+    processRequest(searchTerm, status);
+    history.push('/requests');
+    fetchAllRequests();
+  }
+
+  handleApproval() {
+    const { singleRequest: { singleRequest: { data } } } = this.props;
+
+    if (data && data[0].requeststatus === 'pending') {
+      this.handleProcess('approve')
+    }
+  }
+
+  handleDisapproval() {
+    const { singleRequest: { singleRequest: { data } } } = this.props;
+
+    if (data && data[0].requeststatus === 'pending') {
+      this.handleProcess('disapprove')
+    }
+  }
+
+  handleResolution() {
+    const { singleRequest: { singleRequest: { data } } } = this.props;
+
+    if (data && data[0].requeststatus === 'approved') {
+      this.handleProcess('resolve')
+    }
   }
 
 
@@ -47,7 +90,6 @@ class SingleRequest extends Component {
     }
 
     const { singleRequest: { data } } = singleRequest;
-    console.log('REQUEST', data && data[0])
 
     return (
       <div className="signUp">
@@ -112,20 +154,20 @@ class SingleRequest extends Component {
                 }
                 {
                   data && data[0].requeststatus === 'pending' && user.isadmin ?
-                  <button className="btn btn-details btn-margin">
-                    <i class="fa fa-thumbs-up"></i> Approve
+                  <button className="btn btn-details btn-margin" onClick={ this.handleApproval }>
+                    <i className="fa fa-thumbs-up"></i> Approve
                   </button> : null
                 }
                 {
                   data && data[0].requeststatus === 'pending' && user.isadmin ?
-                  <button className="btn btn-delete">
-                    <i class="fa fa-thumbs-down"></i> Disapprove
+                  <button className="btn btn-delete" onClick={ this.handleDisapproval }>
+                    <i className="fa fa-thumbs-down"></i> Disapprove
                   </button> : null
                 }
                 {
                   data && data[0].requeststatus === 'approved' && user.isadmin ?
-                  <button className="btn btn-delete">
-                    <i class="fa fa-check"></i> Check as resolved
+                  <button className="btn resolve-btn" onClick={ this.handleResolution }>
+                    <i className="fa fa-check"></i> Check as resolved
                   </button> : null
                 }
               </div>
@@ -140,6 +182,8 @@ class SingleRequest extends Component {
 SingleRequest.propTypes = {
   fetchSingleRequest: PropTypes.func.isRequired,
   fetchUserSingleRequest: PropTypes.func.isRequired,
+  processRequest: PropTypes.func.isRequired,
+  fetchAllRequests: PropTypes.func.isRequired,
   singleRequest: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
 };
@@ -147,6 +191,12 @@ SingleRequest.propTypes = {
 const mapStateToProps = state => ({
   singleRequest: state.singleRequest,
   auth: state.auth,
+  processed: state. processed
 });
 
-export default connect(mapStateToProps, { fetchSingleRequest, fetchUserSingleRequest })(SingleRequest);
+export default connect(mapStateToProps, { 
+  fetchSingleRequest, 
+  fetchUserSingleRequest, 
+  processRequest, 
+  fetchAllRequests 
+})(SingleRequest);

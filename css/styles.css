@@ -706,3 +706,15 @@ label {
   min-height: 80vh;
   margin-top: 100px;
 }
+
+.resolve-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.resolve-btn:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: #fff;
+}
