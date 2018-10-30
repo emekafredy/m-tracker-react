@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 // action
 import { registerUser } from '../../actions/auth';
 
-class SignUp extends Component {
+export class SignUp extends Component {
   constructor() {
     super();
     this.state = {
@@ -70,6 +70,7 @@ class SignUp extends Component {
               className={classnames('input-class', {
                 'error-outline': errors.firstName
               })}
+              id="firstName"
               type="text" placeholder="First name" name="firstName"
               value={ this.state.firstName }
               onChange={ this.handleChange }
@@ -80,6 +81,7 @@ class SignUp extends Component {
             className={classnames('input-class', {
               'error-outline': errors.lastName
             })}
+            id="lastName"
             type="text" placeholder="Last name" name="lastName"
             value={ this.state.lastName }
             onChange={ this.handleChange }
@@ -90,6 +92,7 @@ class SignUp extends Component {
             className={classnames('input-class', {
               'error-outline': errors.email
             })}
+            id="email"
             type="text" placeholder="Email" name="email"
             value={ this.state.email }
             onChange={ this.handleChange }
@@ -100,6 +103,7 @@ class SignUp extends Component {
             className={classnames('input-class', {
               'error-outline': errors.password
             })}
+            id="password"
             type="password" placeholder="Password" name="password"
             value={ this.state.password }
             onChange={ this.handleChange }

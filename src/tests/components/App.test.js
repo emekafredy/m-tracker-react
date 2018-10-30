@@ -1,15 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
+import App from '../../App';
 
-import Login from '../components/Auth/Login';
-
-describe('Login component', () => {
-  test("renders the Login component", () => {
+describe('Signup component', () => {
+  test("renders the signup component", () => {
     const wrapper = shallow(
-      <Provider>
-        <Login />
-      </Provider>
+    <Provider>
+      <App />
+    </Provider>
     );
 
     expect(wrapper.exists()).toBe(true);

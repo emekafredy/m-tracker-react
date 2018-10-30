@@ -1,7 +1,7 @@
 import { SET_CURRENT_USER } from '../actionTypes/auth.types';
 import isEmpty from '../utils/isEmpty';
 
-const initialState = {
+export const initialState = {
   isAuthenticated: false,
   loading: false,
   user:{}

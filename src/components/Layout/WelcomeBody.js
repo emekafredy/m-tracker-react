@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-class WelcomeBody extends Component {
+export class WelcomeBody extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
     return (

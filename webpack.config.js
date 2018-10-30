@@ -1,5 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
+const env = process.env.NODE_ENV;
 
 module.exports = {
   entry: './index.js',
@@ -30,5 +33,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
+    new webpack.DefinePlugin({
+      API: env === 'production' ? JSON.stringify('https://emeka-m-tracker.herokuapp.com') : 
+        JSON.stringify('http://localhost:4500'),
+    })
   ],
 }

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 // action
 import { loginUser } from '../../actions/auth';
 
-class Login extends Component {
+export class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -65,6 +65,7 @@ class Login extends Component {
               className={classnames('input-class', {
                 'error-outline': errors.email
               })}
+              id="email"
               type="text" placeholder="Email" name="email"
               value={ this.state.email }
               onChange={ this.handleChange }
@@ -75,13 +76,14 @@ class Login extends Component {
               className={classnames('input-class', {
                 'error-outline': errors.password
               })}
+              id="password"
               type="password" placeholder="Password" name="password"
               value={ this.state.password }
               onChange={ this.handleChange }
             />
             { errors.errors.password ? (<div className="error-message">{ errors.errors.password }</div>) : '' }
 
-            <input type="submit" value="Login"/> 
+            <input type="submit" value="Login" id="submit"/> 
 
           </form>
           <div className="centre-div">

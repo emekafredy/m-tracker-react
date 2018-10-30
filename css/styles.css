@@ -172,18 +172,19 @@ a > span.role {
   .navbar > .nav-links {
     background-color:#333;
     display:block;
-    height:0;
+    height: 50%;
     left:0;
     overflow-y:hidden;
     position:absolute;
     top:50px;
     transition:all .3s ease-in;
-    width:100%
+    width:100%;
   }
 
-  .navbar > .nav-links > a {
+  .auth-links {
     display:block;
-    width:100%
+    width:100%;
+    border-bottom: 1px solid #fff;
   }
 
   .navbar > #nav-check:not(:checked) + .nav-links {

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { logUserOut } from '../../actions/auth';
 
-class Navbar extends Component {
+export class Navbar extends Component {
 
   onLogoutClick(event) {
     event.preventDefault();
@@ -22,14 +22,14 @@ class Navbar extends Component {
 
     const authMenu = (
       <div className="nav-links">
-        <Link to="/new">
+        <Link to="/new" className="auth-links">
           <i className="fa fa-plus"></i> Create new request
         </Link>
         <Link to="/" onClick={ this.onLogoutClick.bind(this) }
-          className="auth-links">
+          className="auth-links" id="logoutuser">
           Logout
         </Link>
-        <Link to=""> 
+        <Link to="" className="auth-links"> 
           <span className="role">
             <i className="fa fa-user-circle-o"></i> { isAuthenticated ? user.user.firstname : ''}
           </span>

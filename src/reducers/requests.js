@@ -4,7 +4,7 @@ import {
   CLEAR_REQUESTS_DATA
 } from '../actionTypes/requests.types';
 
-const initialState = {
+export const initialState = {
   requests: [],
   loading: false
 };

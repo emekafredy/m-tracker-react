@@ -7,8 +7,6 @@ import {
   DELETE_REQUEST_SUCCESS
 } from '../actionTypes/request.types';
 
-const API = 'https://emeka-m-tracker.herokuapp.com';
-
 
 const fetchSingleRequestLoading = () => {
   return {
@@ -26,7 +24,7 @@ const deleteRequestLoading = () => {
 export const fetchUserSingleRequest = (requestId) => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(fetchSingleRequestLoading());
-  axios
+  return axios
     .get(`${API}/api/v1/users/requests/${requestId}`,
       {
         headers: {
@@ -50,7 +48,7 @@ export const fetchUserSingleRequest = (requestId) => dispatch => {
 export const fetchSingleRequest = (requestId) => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(fetchSingleRequestLoading());
-  axios
+  return axios
     .get(`${API}/api/v1/requests/${requestId}`,
       {
         headers: {
@@ -73,7 +71,7 @@ export const fetchSingleRequest = (requestId) => dispatch => {
 export const deleteUserRequest = (requestId) => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(deleteRequestLoading());
-  axios
+  return axios
     .delete(`${API}/api/v1/users/requests/${requestId}`,
       {
         headers: {
