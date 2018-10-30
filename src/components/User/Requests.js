@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 // action
@@ -41,7 +42,7 @@ class Requests extends Component {
       <div className="signUp">
         <div className="header">
           <div className="container">
-            <h1>My Requests</h1>
+            { user.isadmin ?  <h1>All Requests</h1> : <h1>My Requests</h1> }
             <p id="status-message">
               { message }
             </p>
@@ -72,7 +73,7 @@ class Requests extends Component {
                     <td data-label="Request Type">{requesttype}</td>
                     <td data-label="Status">{requeststatus}</td>
                     <td data-label="Details">
-                      <button className="btn btn-details"> details </button>
+                      <Link className="btn btn-details" to={`/request/${requestid}`}> details </Link>
                     </td>
                     { !user.isadmin ? 
                       <td data-label="Cancel">

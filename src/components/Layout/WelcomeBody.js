@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 class WelcomeBody extends Component {
   render() {
+    const { isAuthenticated, user } = this.props.auth;
     return (
       <div>
         <header id="header">
           <div className="container">
             <h1>Maintenance Tracker App</h1>
             <h2>Get it Fixed</h2>
-            <Link to="/register">
-              <button className="btn-signup">Get Started</button>
-            </Link>
+            {
+              isAuthenticated ? 
+              <Link to="/requests">
+                <button className="btn-signup">View Requests</button>
+              </Link> : 
+              <Link to="/register">
+                <button className="btn-signup">Get Started</button>
+              </Link>
+            }
           </div>
         </header>
 
@@ -39,4 +48,12 @@ class WelcomeBody extends Component {
   }
 }
 
-export default  WelcomeBody;
+WelcomeBody.propTypes = {
+  auth: PropTypes.object.isRequired,
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps, null )(withRouter(WelcomeBody));

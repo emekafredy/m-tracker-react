@@ -10,6 +10,7 @@ import SignUp from './components/Auth/SignUp';
 import Login from './components/Auth/Login';
 import Requests from './components/User/Requests';
 import CreateRequest from './components/User/CreateRequest';
+import SingleRequest from './components/User/SingleRequest';
 
 // redux store configuration
 import configureStore from './store/configureStore';
@@ -48,7 +49,8 @@ class App extends Component {
             <Route path='/register' component={ SignUp }/>
             <Route path='/login' component={ Login }/>
             <Route path="/requests" component={ Requests } />
-            <Route path="/request/new" component={ CreateRequest } />
+            <Route path="/new" component={ CreateRequest } />
+            <Route path="/request/:requestId" component={ SingleRequest }/>
             <Footer />
           </div>
         </BrowserRouter>
