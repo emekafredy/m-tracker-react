@@ -3,9 +3,9 @@ import axios from 'axios';
 import {
   FETCH_REQUEST,
   FETCH_REQUEST_SUCCESS,
-  CLEAR_REQUEST_DATA
+  DELETE_REQUEST,
+  DELETE_REQUEST_SUCCESS
 } from '../actionTypes/request.types';
-// import { GET_ERRORS } from '../actionTypes/errors.types';
 
 const API = 'https://emeka-m-tracker.herokuapp.com';
 
@@ -16,11 +16,11 @@ const fetchSingleRequestLoading = () => {
   }
 }
 
-export const clearRequest = () => {
+const deleteRequestLoading = () => {
   return {
-    type: CLEAR_REQUEST_DATA
-  };
-};
+    type: DELETE_REQUEST,
+  }
+}
 
 // Fetch single request for a logged in user
 export const fetchUserSingleRequest = (requestId) => dispatch => {
@@ -41,9 +41,6 @@ export const fetchUserSingleRequest = (requestId) => dispatch => {
       })
     })
     .catch(error => {
-      // dispatch({
-      //   type: GET_ERRORS,
-      // })
       console.log(error)
     });
 };
@@ -68,9 +65,29 @@ export const fetchSingleRequest = (requestId) => dispatch => {
       })
     })
     .catch(error => {
-      // dispatch({
-      //   type: GET_ERRORS,
-      // })
+      console.log(error)
+    });
+};
+
+// Delete request
+export const deleteUserRequest = (requestId) => dispatch => {
+  const { jwtToken } = localStorage;
+  dispatch(deleteRequestLoading());
+  axios
+    .delete(`${API}/api/v1/users/requests/${requestId}`,
+      {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        }
+      }
+    )
+    .then((response) => {
+      dispatch({
+        type: DELETE_REQUEST_SUCCESS,
+        payload: response.data
+      })
+    })
+    .catch(error => {
       console.log(error)
     });
 };

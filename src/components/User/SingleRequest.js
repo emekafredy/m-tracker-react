@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 
 // action
-import { fetchSingleRequest, fetchUserSingleRequest } from '../../actions/request';
+import { fetchSingleRequest, fetchUserSingleRequest, deleteUserRequest } from '../../actions/request';
 import { processRequest } from '../../actions/processRequest';
-import { fetchAllRequests } from '../../actions/requests';
+import { fetchUserRequests } from '../../actions/requests';
 
 class SingleRequest extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class SingleRequest extends Component {
     this.handleApproval = this.handleApproval.bind(this);
     this.handleDisapproval = this.handleDisapproval.bind(this);
     this.handleResolution = this.handleResolution.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -38,7 +40,6 @@ class SingleRequest extends Component {
   handleProcess(status) {
     const { 
       processRequest,
-      auth: { user: { user } },
       match: { params: { requestId: searchTerm } },
       history,
       fetchAllRequests
@@ -71,6 +72,30 @@ class SingleRequest extends Component {
     if (data && data[0].requeststatus === 'approved') {
       this.handleProcess('resolve')
     }
+  }
+
+  handleDelete() {
+    const { 
+      deleteUserRequest,
+      match: { params: { requestId: searchTerm } },
+      history,
+      fetchAllRequests
+    } = this.props;
+
+    swal({
+      title: "Are you sure?",
+      text: "If you click 'OK', this request will be removed from your list",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        deleteUserRequest(searchTerm);
+        history.push('/requests');
+        fetchUserRequests()
+      }
+    });
   }
 
 
@@ -128,19 +153,20 @@ class SingleRequest extends Component {
 
               {
                 data && data[0].requeststatus === 'disapproved' ?
-                <p className="para"> <label>Approved Date</label> : 
+                <p className="para"> <label>Disapproved Date</label> : 
                   <span>{ data && data[0].disapprovedat }
                 </span></p> : null
               }
 
               {
                 data && data[0].requeststatus === 'resolved' ?
-                <p className="para"> <label>Approved Date</label> : 
+                <p className="para"> <label>Resolved Date</label> : 
                   <span>{ data && data[0].resolvedat }
                 </span></p> : null
               }
               <div className="btn-div float-right">
                 {
+                  data && data[0].requeststatus === 'pending' && !user.isadmin ? 
                   !user.isadmin ? 
                   <Link className="btn btn-details btn-margin" to={`/request/${data && data[0].requestid}/edit`}>
                     <i className="fa fa-pencil-square-o"></i> Edit Request
@@ -148,7 +174,7 @@ class SingleRequest extends Component {
                 }
                 {
                   data && data[0].requeststatus === 'pending' && !user.isadmin ?
-                  <button className="btn btn-delete">
+                  <button className="btn btn-delete" onClick={ this.handleDelete }>
                     <i className="fa fa-close"></i> Delete
                   </button> : null
                 }
@@ -183,7 +209,8 @@ SingleRequest.propTypes = {
   fetchSingleRequest: PropTypes.func.isRequired,
   fetchUserSingleRequest: PropTypes.func.isRequired,
   processRequest: PropTypes.func.isRequired,
-  fetchAllRequests: PropTypes.func.isRequired,
+  fetchUserRequests: PropTypes.func.isRequired,
+  deleteUserRequest: PropTypes.func.isRequired,
   singleRequest: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
 };
@@ -198,5 +225,6 @@ export default connect(mapStateToProps, {
   fetchSingleRequest, 
   fetchUserSingleRequest, 
   processRequest, 
-  fetchAllRequests 
+  fetchUserRequests,
+  deleteUserRequest
 })(SingleRequest);
