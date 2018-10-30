@@ -22,15 +22,18 @@ class Navbar extends Component {
 
     const authMenu = (
       <div className="nav-links">
-      <Link to="/" onClick={ this.onLogoutClick.bind(this) }
-        className="auth-links">
-        Logout
-      </Link>
-      <Link to=""> 
-        <span className="role">
-          <i className="fa fa-user-circle-o"></i> { isAuthenticated ? user.user.firstname : ''}
-        </span>
-      </Link>
+        <Link to="request/new">
+          <i className="fa fa-plus"></i> Create new request
+        </Link>
+        <Link to="/" onClick={ this.onLogoutClick.bind(this) }
+          className="auth-links">
+          Logout
+        </Link>
+        <Link to=""> 
+          <span className="role">
+            <i className="fa fa-user-circle-o"></i> { isAuthenticated ? user.user.firstname : ''}
+          </span>
+        </Link>
       </div> 
     );
 
