@@ -24,13 +24,13 @@ class SignUp extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/me/requests');
+      this.props.history.push('/requests');
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push('/me/requests');
+      this.props.history.push('/requests');
     }
     if (nextProps.errors.errors) {
       this.setState({ errors: nextProps.errors.errors })
@@ -60,56 +60,58 @@ class SignUp extends Component {
     const { errors } = this.state;
     return (
       <div className="signUp">
-        <form className="auth-form" onSubmit={ this.handleSubmit }> 
-          <div className="centre-div">
-            <h2> Sign up </h2>
-            <p>Please fill out every field</p>
-          </div>
-          <input 
+        <div className="card">
+          <form className="auth-form" onSubmit={ this.handleSubmit }> 
+            <div className="centre-div">
+              <h2> Sign up </h2>
+              <p>Please fill out every field</p>
+            </div>
+            <input 
+              className={classnames('input-class', {
+                'error-outline': errors.firstName
+              })}
+              type="text" placeholder="First name" name="firstName"
+              value={ this.state.firstName }
+              onChange={ this.handleChange }
+            />
+            { errors.firstName ? (<div className="error-message">{ errors.firstName }</div>) : '' }
+
+            <input
             className={classnames('input-class', {
-              'error-outline': errors.firstName
+              'error-outline': errors.lastName
             })}
-            type="text" placeholder="First name" name="firstName"
-            value={ this.state.firstName }
+            type="text" placeholder="Last name" name="lastName"
+            value={ this.state.lastName }
             onChange={ this.handleChange }
-          />
-          { errors.firstName ? (<div className="error-message">{ errors.firstName }</div>) : '' }
+            />
+            { errors.lastName ? (<div className="error-message">{ errors.lastName }</div>) : '' }
+      
+            <input
+            className={classnames('input-class', {
+              'error-outline': errors.email
+            })}
+            type="text" placeholder="Email" name="email"
+            value={ this.state.email }
+            onChange={ this.handleChange }
+            />
+            { errors.email ? (<div className="error-message">{ errors.email }</div>) : '' }
 
-          <input
-          className={classnames('input-class', {
-            'error-outline': errors.lastName
-          })}
-          type="text" placeholder="Last name" name="lastName"
-          value={ this.state.lastName }
-          onChange={ this.handleChange }
-          />
-          { errors.lastName ? (<div className="error-message">{ errors.lastName }</div>) : '' }
-    
-          <input
-          className={classnames('input-class', {
-            'error-outline': errors.email
-          })}
-          type="text" placeholder="Email" name="email"
-          value={ this.state.email }
-          onChange={ this.handleChange }
-          />
-          { errors.email ? (<div className="error-message">{ errors.email }</div>) : '' }
+            <input
+            className={classnames('input-class', {
+              'error-outline': errors.password
+            })}
+            type="password" placeholder="Password" name="password"
+            value={ this.state.password }
+            onChange={ this.handleChange }
+            />
+            { errors.password ? (<div className="error-message">{ errors.password }</div>) : '' }
 
-          <input
-          className={classnames('input-class', {
-            'error-outline': errors.password
-          })}
-          type="password" placeholder="Password" name="password"
-          value={ this.state.password }
-          onChange={ this.handleChange }
-          />
-          { errors.password ? (<div className="error-message">{ errors.password }</div>) : '' }
-
-          <input type="submit" value="Register" id="register"/>
-        </form>
-        <div className="centre-div">
-          <p>Already Registered ?</p>
-          <Link className="links" to="/login"> Login </Link>
+            <input type="submit" value="Register" id="register"/>
+          </form>
+          <div className="centre-div">
+            <p>Already Registered ?</p>
+            <Link className="links" to="/login"> Login </Link>
+          </div>
         </div>
       </div>
     )

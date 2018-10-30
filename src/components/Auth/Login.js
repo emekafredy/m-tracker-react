@@ -22,13 +22,13 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/me/requests');
+      this.props.history.push('/requests');
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push('/me/requests');
+      this.props.history.push('/requests');
     }
     if (nextProps.errors.errors) {
       this.setState({ errors: nextProps.errors.errors })
@@ -59,7 +59,7 @@ class Login extends Component {
         <div className="card">
           <form className="auth-form" onSubmit={ this.handleSubmit }> 
             <div className="centre-div">
-              <h1> Login Here </h1>
+              <h1> Login </h1>
             </div>
             <input
               className={classnames('input-class', {

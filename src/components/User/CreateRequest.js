@@ -25,7 +25,7 @@ class CreateRequest extends Component {
   componentWillReceiveProps(nextProps) {
     console.log('NXTPROPS', nextProps.request.request.success)
     if (nextProps.request.request.success) {
-      this.props.history.push('/me/requests');
+      this.props.history.push('/requests');
     }
     if (nextProps.errors.errors) {
       this.setState({ errors: nextProps.errors.errors })
