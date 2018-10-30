@@ -316,7 +316,7 @@ input[type="submit"]:hover {
 }
 
 .error-message {
-  width: 32%;
+  width: 65%;
   margin: auto;
   margin-top: 0.25rem;
   font-size: 80%;
@@ -717,4 +717,73 @@ label {
   background-color: #218838;
   border-color: #1e7e34;
   color: #fff;
+}
+
+
+button[disabled] {
+  background-color:#f88692;
+  border-color:#f88692;
+  color:#fff;
+}
+
+button[disabled]:hover {
+  background-color:#f88692;
+  border-color:#f88692;
+  color:#fff;
+  cursor: no-drop;
+}
+
+
+
+/* NOT FOUND PAGE DESIGN */
+.not-found {
+  margin-top: 50px;
+  min-height: 68vh;
+  text-align: center;
+}
+
+.not-found-content {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+}
+
+.blue {
+  color: #1d2951;
+  opacity: 1;
+  font-style: italic;
+  font-size: 9rem;
+}
+
+.red {
+  color: #882222;
+  opacity: 1;
+  font-style: italic;
+  font-size: 7rem;
+}
+
+.not-found-message {
+  font-family: 'Kavivanar';
+  font-size: 2rem;
+}
+
+.return-home {
+  text-decoration: none;
+  background-color:#007bff;
+  color: #fff;
+  padding: 10px 30px;
+  border:1px solid transparent;
+  border-radius:.25rem;
+  cursor:pointer;
+  display:inline-block;
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.5;
+  outline:none;
+  text-align:center;
+  transition:color .15s ease-in-out, 
+  background-color .15s ease-in-out, 
+  border-color .15s ease-in-out, 
+  box-shadow .15s ease-in-out;
+  vertical-align:middle;
+  white-space:nowrap;
 }
