@@ -47,7 +47,7 @@ class App extends Component {
             <Route exact path='/' component={ WelcomeBody }/>
             <Route path='/register' component={ SignUp }/>
             <Route path='/login' component={ Login }/>
-            <Route path="/me/requests" component={ Requests } />
+            <Route path="/requests" component={ Requests } />
             <Route path="/request/new" component={ CreateRequest } />
             <Footer />
           </div>

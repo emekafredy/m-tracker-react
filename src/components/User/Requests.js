@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 // action
-import { fetchRequests } from '../../actions/requests';
+import { fetchUserRequests, fetchAllRequests } from '../../actions/requests';
 
 class Requests extends Component {
   constructor(props) {
@@ -13,15 +13,19 @@ class Requests extends Component {
   }
 
   componentDidMount() {
-    const { fetchRequests } = this.props;
-    fetchRequests();
+    const { fetchUserRequests, fetchAllRequests, auth: { user: { user } } } = this.props;
+
+    if (user.isadmin) {
+      return fetchAllRequests()
+    }
+
+    return fetchUserRequests();
   }
 
 
 
   render() {
-    const { requests } = this.props;
-  
+    const { requests, auth: { user: { user } } } = this.props;
     if (requests && requests.loading) {
       return (
         <div className='loading-spinner'>
@@ -48,27 +52,33 @@ class Requests extends Component {
           <table id="requests-table">
             <thead>
               <tr>
+                { user.isadmin ? <th scope="col"> User ID</th> : null }
+                { user.isadmin ? <th scope="col"> Name </th> : null }
                 <th scope="col"> Product </th>
                 <th scope="col">Request Type</th>
                 <th scope="col">Status</th>
                 <th scope="col">Details</th>
-                <th scope="col">Cancel</th>
+                { !user.isadmin ? <th scope="col">Cancel</th> : null }
               </tr>
             </thead>
             <tbody id="table-body">
               {data && data.map(request => {
-                const { requestid, product, requesttype, requeststatus } = request;
+                const { requestid, product, requesttype, requeststatus, userid, firstname, lastname } = request;
                 return (
                   <tr key={requestid}>
+                    { user.isadmin ?  <td data-label="User ID">{userid}</td> : null }
+                    { user.isadmin ?  <td data-label="Name">{ firstname + ' ' + lastname }</td> : null }
                     <td data-label="Product">{product}</td>
                     <td data-label="Request Type">{requesttype}</td>
                     <td data-label="Status">{requeststatus}</td>
                     <td data-label="Details">
                       <button className="btn btn-details"> details </button>
                     </td>
-                    <td data-label="Cancel">
-                      <button className="btn btn-delete"> delete </button>
-                    </td>
+                    { !user.isadmin ? 
+                      <td data-label="Cancel">
+                        <button className="btn btn-delete"> delete </button>
+                      </td> : null
+                    }
                   </tr>
                 )
               })}
@@ -81,12 +91,15 @@ class Requests extends Component {
 }
 
 Requests.propTypes = {
-  fetchRequests: PropTypes.func.isRequired,
-  requests: PropTypes.object.isRequired
+  fetchUserRequests: PropTypes.func.isRequired,
+  fetchAllRequests: PropTypes.func.isRequired,
+  requests: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  requests: state.requests
+  requests: state.requests,
+  auth: state.auth,
 });
 
-export default connect(mapStateToProps, { fetchRequests })(Requests);
+export default connect(mapStateToProps, { fetchUserRequests, fetchAllRequests })(Requests);
