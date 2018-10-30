@@ -142,9 +142,9 @@ class SingleRequest extends Component {
               <div className="btn-div float-right">
                 {
                   !user.isadmin ? 
-                  <button className="btn btn-details btn-margin">
+                  <Link className="btn btn-details btn-margin" to={`/request/${data && data[0].requestid}/edit`}>
                     <i className="fa fa-pencil-square-o"></i> Edit Request
-                  </button> : null
+                  </Link> : null
                 }
                 {
                   data && data[0].requeststatus === 'pending' && !user.isadmin ?
