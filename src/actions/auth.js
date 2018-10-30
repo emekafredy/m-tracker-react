@@ -6,7 +6,7 @@ import setAuthToken from '../utils/setAuthToken';
 import { GET_ERRORS } from '../actionTypes/errors.types';
 import { SET_CURRENT_USER } from '../actionTypes/auth.types';
 
-const API = 'http://emeka-m-tracker.herokuapp.com';
+const API = 'https://emeka-m-tracker.herokuapp.com';
 
 
 // Register User

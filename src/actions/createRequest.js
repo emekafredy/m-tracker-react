@@ -4,7 +4,7 @@ import axios from 'axios';
 import { CREATE_REQUEST, CREATE_REQUEST_SUCCESS } from '../actionTypes/createRequest';
 import { GET_ERRORS } from '../actionTypes/errors.types';
 
-const API = 'http://emeka-m-tracker.herokuapp.com';
+const API = 'https://emeka-m-tracker.herokuapp.com';
 
 const createRequestLoading = () => {
   return {

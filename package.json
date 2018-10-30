@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose --coverage",
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "dev": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "heroku-postbuild": "npm run build",
+    "start": "serve -s dist/"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,8 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "serve": "^10.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
