@@ -64,7 +64,7 @@ class CreateRequest extends Component {
 
         <div className="container">
         <div className="back">
-          <Link className="btn btn-back" to="/me/requests">
+          <Link className="btn btn-back" to="/requests">
             <i className="fa fa-arrow-left"></i> Back to requests
           </Link>
         </div>
