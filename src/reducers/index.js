@@ -6,6 +6,7 @@ import requestsReducer from './requests';
 import createRequestReducer from './createRequest';
 import requestReducer from './request';
 import processRequestReducer from './processRequest';
+import updateRequestReducer from './updateRequest';
 
 export default combineReducers({
   auth: authReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
   requests: requestsReducer,
   request: createRequestReducer,
   singleRequest: requestReducer,
-  processed: processRequestReducer
+  processed: processRequestReducer,
+  requestUpdate: updateRequestReducer,
 });
