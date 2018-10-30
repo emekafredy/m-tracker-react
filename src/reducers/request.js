@@ -1,7 +1,8 @@
 import {
   FETCH_REQUEST,
   FETCH_REQUEST_SUCCESS,
-  CLEAR_REQUEST_DATA
+  DELETE_REQUEST,
+  DELETE_REQUEST_SUCCESS
 } from '../actionTypes/request.types';
 
 const initialState = {
@@ -22,7 +23,12 @@ const requestReducer = (state = initialState, action) => {
         singleRequest: action.payload,
         loading: false
       };
-    case CLEAR_REQUEST_DATA:
+    case DELETE_REQUEST:
+      return {
+        ...state,
+        loading: true
+      };
+    case DELETE_REQUEST_SUCCESS:
       return {
         ...state,
         singleRequest: {}

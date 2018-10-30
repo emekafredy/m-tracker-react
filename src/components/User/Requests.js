@@ -6,11 +6,14 @@ import { Link } from 'react-router-dom';
 
 // action
 import { fetchUserRequests, fetchAllRequests } from '../../actions/requests';
+import { deleteUserRequest } from '../../actions/request';
 
 class Requests extends Component {
   constructor(props) {
     super(props);
     this.state ={};
+
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +24,31 @@ class Requests extends Component {
     }
 
     return fetchUserRequests();
+  }
+
+  handleDelete(event) {
+    const { currentTarget: { value: requestId } } = event;
+
+    const { 
+      deleteUserRequest,
+      history,
+      fetchUserRequests
+    } = this.props;
+
+    swal({
+      title: "Are you sure?",
+      text: "If you click 'OK', this request will be removed from your list",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        deleteUserRequest(requestId);
+        history.push('/requests');
+        fetchUserRequests();
+      }
+    });
   }
 
 
@@ -75,10 +103,17 @@ class Requests extends Component {
                     <td data-label="Details">
                       <Link className="btn btn-details" to={`/request/${requestid}`}> details </Link>
                     </td>
-                    { !user.isadmin ? 
-                      <td data-label="Cancel">
-                        <button className="btn btn-delete"> delete </button>
-                      </td> : null
+                    { 
+                      !user.isadmin ? 
+                        <td data-label="Cancel">
+                          <button className="btn btn-delete" 
+                            disabled={requeststatus !== "pending" ? "disabled" : ''}
+                            onClick={ this.handleDelete }
+                            value={ requestid }
+                          > 
+                            delete
+                          </button>
+                        </td> : null
                     }
                   </tr>
                 )
@@ -94,6 +129,7 @@ class Requests extends Component {
 Requests.propTypes = {
   fetchUserRequests: PropTypes.func.isRequired,
   fetchAllRequests: PropTypes.func.isRequired,
+  deleteUserRequest: PropTypes.func.isRequired,
   requests: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
 };
@@ -103,4 +139,4 @@ const mapStateToProps = state => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { fetchUserRequests, fetchAllRequests })(Requests);
+export default connect(mapStateToProps, { fetchUserRequests, fetchAllRequests, deleteUserRequest })(Requests);
