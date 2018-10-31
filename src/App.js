@@ -50,12 +50,12 @@ class App extends Component {
             <Navbar />
             <Switch>
               <Route exact path='/' component={ WelcomeBody }/>
-              <Route path='/register' component={ SignUp }/>
-              <Route path='/login' component={ Login }/>
-              <PrivateRoute path="/requests" component={ Requests } />
-              <PrivateRoute path="/new" component={ CreateRequest } />
-              <PrivateRoute path="/request/:requestId" component={ SingleRequest }/>
-              <PrivateRoute path="/request/:requestId/edit" component={ UpdateRequest }/>
+              <Route exact path='/register' component={ SignUp }/>
+              <Route exact path='/login' component={ Login }/>
+              <PrivateRoute exact path="/requests" component={ Requests } />
+              <PrivateRoute exact path="/new" component={ CreateRequest } />
+              <PrivateRoute exact path="/request/:requestId" component={ SingleRequest }/>
+              <PrivateRoute exact path="/request/:requestId/edit" component={ UpdateRequest }/>
               <Route component={ NotFound } />
             </Switch>
             <Footer />
