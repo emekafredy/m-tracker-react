@@ -4,8 +4,6 @@ import axios from 'axios';
 import { UPDATE_REQUEST, UPDATE_REQUEST_SUCCESS } from '../actionTypes/updateRequest.types';
 import { GET_ERRORS } from '../actionTypes/errors.types';
 
-const API = 'https://emeka-m-tracker.herokuapp.com';
-
 const updateRequestLoading = () => {
   return {
     type: UPDATE_REQUEST,
@@ -32,10 +30,6 @@ export const updateUserRequest = (requestId, updateData) => dispatch => {
           payload: response.data
         })
       }
-      dispatch({
-        type: GET_ERRORS,
-        payload: response.data
-      })
       return response;
     })
     .catch(error => {

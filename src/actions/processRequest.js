@@ -4,8 +4,6 @@ import axios from 'axios';
 import { PROCESS_REQUEST, PROCESS_REQUEST_SUCCESS } from '../actionTypes/processRequest.types';
 import { GET_ERRORS } from '../actionTypes/errors.types';
 
-const API = 'https://emeka-m-tracker.herokuapp.com';
-
 const processRequestLoading = () => {
   return {
     type: PROCESS_REQUEST,
@@ -16,7 +14,7 @@ const processRequestLoading = () => {
 export const processRequest = (requestId, status) => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(processRequestLoading());
-  axios
+  return axios
     .put(`${API}/api/v1/requests/${requestId}/${status}`, {},
       {
         headers: {

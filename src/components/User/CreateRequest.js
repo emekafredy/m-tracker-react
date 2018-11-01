@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { createNewRequest } from '../../actions/createRequest';
 
 
-class CreateRequest extends Component {
+export class CreateRequest extends Component {
   constructor() {
     super();
     this.state = {
@@ -75,7 +75,7 @@ class CreateRequest extends Component {
           <form onSubmit={ this.handleSubmit }>
             <div className="form">
               <label>Product</label>
-              <select name="product" value={ this.state.product } onChange={ this.handleChange }>
+              <select name="product" value={ this.state.product } onChange={ this.handleChange } id="my-product">
                 <option value="laptop">laptop</option>
                 <option value="monitor">monitor</option>
                 <option value="chair">chair</option>
@@ -103,7 +103,7 @@ class CreateRequest extends Component {
             </div>
             { errors.Issue ? (<div className="error-message">{ errors.Issue }</div>) : '' }
 
-            <input type="submit" value="submit" className="btn btn-back" />
+            <input type="submit" value="submit" className="btn btn-back" id="create-request"/>
           </form>
         </div>
       </div>

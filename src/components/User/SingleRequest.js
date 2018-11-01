@@ -10,7 +10,7 @@ import { fetchSingleRequest, fetchUserSingleRequest, deleteUserRequest } from '.
 import { processRequest } from '../../actions/processRequest';
 import { fetchUserRequests } from '../../actions/requests';
 
-class SingleRequest extends Component {
+export class SingleRequest extends Component {
   constructor(props) {
     super(props);
     this.state ={};
@@ -179,7 +179,7 @@ class SingleRequest extends Component {
                 }
                 {
                   data && data[0].requeststatus === 'pending' && user.isadmin ?
-                  <button className="btn btn-details btn-margin" onClick={ this.handleApproval }>
+                  <button className="btn btn-details btn-margin" onClick={ this.handleApproval } id="approve-request">
                     <i className="fa fa-thumbs-up"></i> Approve
                   </button> : null
                 }

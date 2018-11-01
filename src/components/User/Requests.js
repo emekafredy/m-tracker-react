@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { fetchUserRequests, fetchAllRequests } from '../../actions/requests';
 import { deleteUserRequest } from '../../actions/request';
 
-class Requests extends Component {
+export class Requests extends Component {
   constructor(props) {
     super(props);
     this.state ={};
@@ -20,7 +20,7 @@ class Requests extends Component {
     const { fetchUserRequests, fetchAllRequests, auth: { user: { user } } } = this.props;
 
     if (user.isadmin) {
-      return fetchAllRequests()
+      return fetchAllRequests();
     }
 
     return fetchUserRequests();

@@ -6,8 +6,6 @@ import {
   CLEAR_REQUESTS_DATA
 } from '../actionTypes/requests.types';
 
-const API = 'https://emeka-m-tracker.herokuapp.com';
-
 
 const fetchRequestsLoading = () => {
   return {
@@ -15,17 +13,11 @@ const fetchRequestsLoading = () => {
   }
 }
 
-export const clearRequests = () => {
-  return {
-    type: CLEAR_REQUESTS_DATA
-  };
-};
-
 // Fetch all requests for a logged in user
 export const fetchUserRequests = () => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(fetchRequestsLoading());
-  axios
+  return axios
     .get(`${API}/api/v1/users/requests`,
       {
         headers: {
@@ -52,7 +44,7 @@ export const fetchUserRequests = () => dispatch => {
 export const fetchAllRequests = () => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(fetchRequestsLoading());
-  axios
+  return axios
     .get(`${API}/api/v1/requests`,
       {
         headers: {

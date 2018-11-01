@@ -4,8 +4,6 @@ import axios from 'axios';
 import { CREATE_REQUEST, CREATE_REQUEST_SUCCESS } from '../actionTypes/createRequest';
 import { GET_ERRORS } from '../actionTypes/errors.types';
 
-const API = 'https://emeka-m-tracker.herokuapp.com';
-
 const createRequestLoading = () => {
   return {
     type: CREATE_REQUEST,
@@ -16,7 +14,7 @@ const createRequestLoading = () => {
 export const createNewRequest = (requestData) => dispatch => {
   const { jwtToken } = localStorage;
   dispatch(createRequestLoading());
-  axios
+  return axios
     .post(`${API}/api/v1/users/requests`, requestData, 
       {
         headers: {

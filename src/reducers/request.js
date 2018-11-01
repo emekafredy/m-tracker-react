@@ -5,7 +5,7 @@ import {
   DELETE_REQUEST_SUCCESS
 } from '../actionTypes/request.types';
 
-const initialState = {
+export const initialState = {
   singleRequest: {},
   loading: false
 };

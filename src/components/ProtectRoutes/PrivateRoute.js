@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 
-class PrivateRoute extends Component {
+export class PrivateRoute extends Component {
   constructor(props) {
     super(props)
     this.state = {};

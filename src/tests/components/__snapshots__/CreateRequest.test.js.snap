@@ -1,0 +1,2020 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateRequest component renders the create request component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateRequest
+    action={
+      Object {
+        "createNewRequest": [MockFunction],
+      }
+    }
+    errors={Object {}}
+    history={
+      Object {
+        "push": [MockFunction],
+      }
+    }
+    request={Object {}}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="header"
+        >
+          <div
+            className="container"
+          >
+            <h1>
+              New Request
+            </h1>
+          </div>
+        </div>,
+        <div
+          className="container"
+        >
+          <div
+            className="back"
+          >
+            <Link
+              className="btn btn-back"
+              replace={false}
+              to="/requests"
+            >
+              <i
+                className="fa fa-arrow-left"
+              />
+               Back to requests
+            </Link>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="title"
+            >
+              Add Request
+            </div>
+            <form
+              onSubmit={[Function]}
+            >
+              <div
+                className="form"
+              >
+                <label>
+                  Product
+                </label>
+                <select
+                  id="my-product"
+                  name="product"
+                  onChange={[Function]}
+                  value="laptop"
+                >
+                  <option
+                    value="laptop"
+                  >
+                    laptop
+                  </option>
+                  <option
+                    value="monitor"
+                  >
+                    monitor
+                  </option>
+                  <option
+                    value="chair"
+                  >
+                    chair
+                  </option>
+                  <option
+                    value="desk"
+                  >
+                    desk
+                  </option>
+                  <option
+                    value="charger"
+                  >
+                    charger
+                  </option>
+                  <option
+                    value="headphone"
+                  >
+                    headphone
+                  </option>
+                </select>
+              </div>
+              
+              <div
+                className="form"
+              >
+                <label>
+                  Request Type
+                </label>
+                <select
+                  name="requestType"
+                  onChange={[Function]}
+                  value="maintenance"
+                >
+                  <option
+                    value="maintenance"
+                  >
+                    maintenance
+                  </option>
+                  <option
+                    value="repair"
+                  >
+                    repair
+                  </option>
+                  <option
+                    value="replace"
+                  >
+                    replace
+                  </option>
+                </select>
+              </div>
+              
+              <div
+                className="form"
+              >
+                <label
+                  htmlFor="type"
+                >
+                  Issue
+                </label>
+                <textarea
+                  name="issue"
+                  onChange={[Function]}
+                  value=""
+                />
+              </div>
+              
+              <input
+                className="btn btn-back"
+                id="create-request"
+                type="submit"
+                value="submit"
+              />
+            </form>
+          </div>
+        </div>,
+      ],
+      "className": "signUp",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="container"
+          >
+            <h1>
+              New Request
+            </h1>
+          </div>,
+          "className": "header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <h1>
+              New Request
+            </h1>,
+            "className": "container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "New Request",
+            },
+            "ref": null,
+            "rendered": "New Request",
+            "type": "h1",
+          },
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="back"
+            >
+              <Link
+                className="btn btn-back"
+                replace={false}
+                to="/requests"
+              >
+                <i
+                  className="fa fa-arrow-left"
+                />
+                 Back to requests
+              </Link>
+            </div>,
+            <div
+              className="card"
+            >
+              <div
+                className="title"
+              >
+                Add Request
+              </div>
+              <form
+                onSubmit={[Function]}
+              >
+                <div
+                  className="form"
+                >
+                  <label>
+                    Product
+                  </label>
+                  <select
+                    id="my-product"
+                    name="product"
+                    onChange={[Function]}
+                    value="laptop"
+                  >
+                    <option
+                      value="laptop"
+                    >
+                      laptop
+                    </option>
+                    <option
+                      value="monitor"
+                    >
+                      monitor
+                    </option>
+                    <option
+                      value="chair"
+                    >
+                      chair
+                    </option>
+                    <option
+                      value="desk"
+                    >
+                      desk
+                    </option>
+                    <option
+                      value="charger"
+                    >
+                      charger
+                    </option>
+                    <option
+                      value="headphone"
+                    >
+                      headphone
+                    </option>
+                  </select>
+                </div>
+                
+                <div
+                  className="form"
+                >
+                  <label>
+                    Request Type
+                  </label>
+                  <select
+                    name="requestType"
+                    onChange={[Function]}
+                    value="maintenance"
+                  >
+                    <option
+                      value="maintenance"
+                    >
+                      maintenance
+                    </option>
+                    <option
+                      value="repair"
+                    >
+                      repair
+                    </option>
+                    <option
+                      value="replace"
+                    >
+                      replace
+                    </option>
+                  </select>
+                </div>
+                
+                <div
+                  className="form"
+                >
+                  <label
+                    htmlFor="type"
+                  >
+                    Issue
+                  </label>
+                  <textarea
+                    name="issue"
+                    onChange={[Function]}
+                    value=""
+                  />
+                </div>
+                
+                <input
+                  className="btn btn-back"
+                  id="create-request"
+                  type="submit"
+                  value="submit"
+                />
+              </form>
+            </div>,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                className="btn btn-back"
+                replace={false}
+                to="/requests"
+              >
+                <i
+                  className="fa fa-arrow-left"
+                />
+                 Back to requests
+              </Link>,
+              "className": "back",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fa fa-arrow-left"
+                  />,
+                  " Back to requests",
+                ],
+                "className": "btn btn-back",
+                "replace": false,
+                "to": "/requests",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fa fa-arrow-left",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                " Back to requests",
+              ],
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="title"
+                >
+                  Add Request
+                </div>,
+                <form
+                  onSubmit={[Function]}
+                >
+                  <div
+                    className="form"
+                  >
+                    <label>
+                      Product
+                    </label>
+                    <select
+                      id="my-product"
+                      name="product"
+                      onChange={[Function]}
+                      value="laptop"
+                    >
+                      <option
+                        value="laptop"
+                      >
+                        laptop
+                      </option>
+                      <option
+                        value="monitor"
+                      >
+                        monitor
+                      </option>
+                      <option
+                        value="chair"
+                      >
+                        chair
+                      </option>
+                      <option
+                        value="desk"
+                      >
+                        desk
+                      </option>
+                      <option
+                        value="charger"
+                      >
+                        charger
+                      </option>
+                      <option
+                        value="headphone"
+                      >
+                        headphone
+                      </option>
+                    </select>
+                  </div>
+                  
+                  <div
+                    className="form"
+                  >
+                    <label>
+                      Request Type
+                    </label>
+                    <select
+                      name="requestType"
+                      onChange={[Function]}
+                      value="maintenance"
+                    >
+                      <option
+                        value="maintenance"
+                      >
+                        maintenance
+                      </option>
+                      <option
+                        value="repair"
+                      >
+                        repair
+                      </option>
+                      <option
+                        value="replace"
+                      >
+                        replace
+                      </option>
+                    </select>
+                  </div>
+                  
+                  <div
+                    className="form"
+                  >
+                    <label
+                      htmlFor="type"
+                    >
+                      Issue
+                    </label>
+                    <textarea
+                      name="issue"
+                      onChange={[Function]}
+                      value=""
+                    />
+                  </div>
+                  
+                  <input
+                    className="btn btn-back"
+                    id="create-request"
+                    type="submit"
+                    value="submit"
+                  />
+                </form>,
+              ],
+              "className": "card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Add Request",
+                  "className": "title",
+                },
+                "ref": null,
+                "rendered": "Add Request",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="form"
+                    >
+                      <label>
+                        Product
+                      </label>
+                      <select
+                        id="my-product"
+                        name="product"
+                        onChange={[Function]}
+                        value="laptop"
+                      >
+                        <option
+                          value="laptop"
+                        >
+                          laptop
+                        </option>
+                        <option
+                          value="monitor"
+                        >
+                          monitor
+                        </option>
+                        <option
+                          value="chair"
+                        >
+                          chair
+                        </option>
+                        <option
+                          value="desk"
+                        >
+                          desk
+                        </option>
+                        <option
+                          value="charger"
+                        >
+                          charger
+                        </option>
+                        <option
+                          value="headphone"
+                        >
+                          headphone
+                        </option>
+                      </select>
+                    </div>,
+                    "",
+                    <div
+                      className="form"
+                    >
+                      <label>
+                        Request Type
+                      </label>
+                      <select
+                        name="requestType"
+                        onChange={[Function]}
+                        value="maintenance"
+                      >
+                        <option
+                          value="maintenance"
+                        >
+                          maintenance
+                        </option>
+                        <option
+                          value="repair"
+                        >
+                          repair
+                        </option>
+                        <option
+                          value="replace"
+                        >
+                          replace
+                        </option>
+                      </select>
+                    </div>,
+                    "",
+                    <div
+                      className="form"
+                    >
+                      <label
+                        htmlFor="type"
+                      >
+                        Issue
+                      </label>
+                      <textarea
+                        name="issue"
+                        onChange={[Function]}
+                        value=""
+                      />
+                    </div>,
+                    "",
+                    <input
+                      className="btn btn-back"
+                      id="create-request"
+                      type="submit"
+                      value="submit"
+                    />,
+                  ],
+                  "onSubmit": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <label>
+                          Product
+                        </label>,
+                        <select
+                          id="my-product"
+                          name="product"
+                          onChange={[Function]}
+                          value="laptop"
+                        >
+                          <option
+                            value="laptop"
+                          >
+                            laptop
+                          </option>
+                          <option
+                            value="monitor"
+                          >
+                            monitor
+                          </option>
+                          <option
+                            value="chair"
+                          >
+                            chair
+                          </option>
+                          <option
+                            value="desk"
+                          >
+                            desk
+                          </option>
+                          <option
+                            value="charger"
+                          >
+                            charger
+                          </option>
+                          <option
+                            value="headphone"
+                          >
+                            headphone
+                          </option>
+                        </select>,
+                      ],
+                      "className": "form",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Product",
+                        },
+                        "ref": null,
+                        "rendered": "Product",
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <option
+                              value="laptop"
+                            >
+                              laptop
+                            </option>,
+                            <option
+                              value="monitor"
+                            >
+                              monitor
+                            </option>,
+                            <option
+                              value="chair"
+                            >
+                              chair
+                            </option>,
+                            <option
+                              value="desk"
+                            >
+                              desk
+                            </option>,
+                            <option
+                              value="charger"
+                            >
+                              charger
+                            </option>,
+                            <option
+                              value="headphone"
+                            >
+                              headphone
+                            </option>,
+                          ],
+                          "id": "my-product",
+                          "name": "product",
+                          "onChange": [Function],
+                          "value": "laptop",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "laptop",
+                              "value": "laptop",
+                            },
+                            "ref": null,
+                            "rendered": "laptop",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "monitor",
+                              "value": "monitor",
+                            },
+                            "ref": null,
+                            "rendered": "monitor",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "chair",
+                              "value": "chair",
+                            },
+                            "ref": null,
+                            "rendered": "chair",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "desk",
+                              "value": "desk",
+                            },
+                            "ref": null,
+                            "rendered": "desk",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "charger",
+                              "value": "charger",
+                            },
+                            "ref": null,
+                            "rendered": "charger",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "headphone",
+                              "value": "headphone",
+                            },
+                            "ref": null,
+                            "rendered": "headphone",
+                            "type": "option",
+                          },
+                        ],
+                        "type": "select",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <label>
+                          Request Type
+                        </label>,
+                        <select
+                          name="requestType"
+                          onChange={[Function]}
+                          value="maintenance"
+                        >
+                          <option
+                            value="maintenance"
+                          >
+                            maintenance
+                          </option>
+                          <option
+                            value="repair"
+                          >
+                            repair
+                          </option>
+                          <option
+                            value="replace"
+                          >
+                            replace
+                          </option>
+                        </select>,
+                      ],
+                      "className": "form",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Request Type",
+                        },
+                        "ref": null,
+                        "rendered": "Request Type",
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <option
+                              value="maintenance"
+                            >
+                              maintenance
+                            </option>,
+                            <option
+                              value="repair"
+                            >
+                              repair
+                            </option>,
+                            <option
+                              value="replace"
+                            >
+                              replace
+                            </option>,
+                          ],
+                          "name": "requestType",
+                          "onChange": [Function],
+                          "value": "maintenance",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "maintenance",
+                              "value": "maintenance",
+                            },
+                            "ref": null,
+                            "rendered": "maintenance",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "repair",
+                              "value": "repair",
+                            },
+                            "ref": null,
+                            "rendered": "repair",
+                            "type": "option",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "replace",
+                              "value": "replace",
+                            },
+                            "ref": null,
+                            "rendered": "replace",
+                            "type": "option",
+                          },
+                        ],
+                        "type": "select",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <label
+                          htmlFor="type"
+                        >
+                          Issue
+                        </label>,
+                        <textarea
+                          name="issue"
+                          onChange={[Function]}
+                          value=""
+                        />,
+                      ],
+                      "className": "form",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Issue",
+                          "htmlFor": "type",
+                        },
+                        "ref": null,
+                        "rendered": "Issue",
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "name": "issue",
+                          "onChange": [Function],
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "textarea",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "btn btn-back",
+                      "id": "create-request",
+                      "type": "submit",
+                      "value": "submit",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "form",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="header"
+          >
+            <div
+              className="container"
+            >
+              <h1>
+                New Request
+              </h1>
+            </div>
+          </div>,
+          <div
+            className="container"
+          >
+            <div
+              className="back"
+            >
+              <Link
+                className="btn btn-back"
+                replace={false}
+                to="/requests"
+              >
+                <i
+                  className="fa fa-arrow-left"
+                />
+                 Back to requests
+              </Link>
+            </div>
+            <div
+              className="card"
+            >
+              <div
+                className="title"
+              >
+                Add Request
+              </div>
+              <form
+                onSubmit={[Function]}
+              >
+                <div
+                  className="form"
+                >
+                  <label>
+                    Product
+                  </label>
+                  <select
+                    id="my-product"
+                    name="product"
+                    onChange={[Function]}
+                    value="laptop"
+                  >
+                    <option
+                      value="laptop"
+                    >
+                      laptop
+                    </option>
+                    <option
+                      value="monitor"
+                    >
+                      monitor
+                    </option>
+                    <option
+                      value="chair"
+                    >
+                      chair
+                    </option>
+                    <option
+                      value="desk"
+                    >
+                      desk
+                    </option>
+                    <option
+                      value="charger"
+                    >
+                      charger
+                    </option>
+                    <option
+                      value="headphone"
+                    >
+                      headphone
+                    </option>
+                  </select>
+                </div>
+                
+                <div
+                  className="form"
+                >
+                  <label>
+                    Request Type
+                  </label>
+                  <select
+                    name="requestType"
+                    onChange={[Function]}
+                    value="maintenance"
+                  >
+                    <option
+                      value="maintenance"
+                    >
+                      maintenance
+                    </option>
+                    <option
+                      value="repair"
+                    >
+                      repair
+                    </option>
+                    <option
+                      value="replace"
+                    >
+                      replace
+                    </option>
+                  </select>
+                </div>
+                
+                <div
+                  className="form"
+                >
+                  <label
+                    htmlFor="type"
+                  >
+                    Issue
+                  </label>
+                  <textarea
+                    name="issue"
+                    onChange={[Function]}
+                    value=""
+                  />
+                </div>
+                
+                <input
+                  className="btn btn-back"
+                  id="create-request"
+                  type="submit"
+                  value="submit"
+                />
+              </form>
+            </div>
+          </div>,
+        ],
+        "className": "signUp",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="container"
+            >
+              <h1>
+                New Request
+              </h1>
+            </div>,
+            "className": "header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h1>
+                New Request
+              </h1>,
+              "className": "container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "New Request",
+              },
+              "ref": null,
+              "rendered": "New Request",
+              "type": "h1",
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="back"
+              >
+                <Link
+                  className="btn btn-back"
+                  replace={false}
+                  to="/requests"
+                >
+                  <i
+                    className="fa fa-arrow-left"
+                  />
+                   Back to requests
+                </Link>
+              </div>,
+              <div
+                className="card"
+              >
+                <div
+                  className="title"
+                >
+                  Add Request
+                </div>
+                <form
+                  onSubmit={[Function]}
+                >
+                  <div
+                    className="form"
+                  >
+                    <label>
+                      Product
+                    </label>
+                    <select
+                      id="my-product"
+                      name="product"
+                      onChange={[Function]}
+                      value="laptop"
+                    >
+                      <option
+                        value="laptop"
+                      >
+                        laptop
+                      </option>
+                      <option
+                        value="monitor"
+                      >
+                        monitor
+                      </option>
+                      <option
+                        value="chair"
+                      >
+                        chair
+                      </option>
+                      <option
+                        value="desk"
+                      >
+                        desk
+                      </option>
+                      <option
+                        value="charger"
+                      >
+                        charger
+                      </option>
+                      <option
+                        value="headphone"
+                      >
+                        headphone
+                      </option>
+                    </select>
+                  </div>
+                  
+                  <div
+                    className="form"
+                  >
+                    <label>
+                      Request Type
+                    </label>
+                    <select
+                      name="requestType"
+                      onChange={[Function]}
+                      value="maintenance"
+                    >
+                      <option
+                        value="maintenance"
+                      >
+                        maintenance
+                      </option>
+                      <option
+                        value="repair"
+                      >
+                        repair
+                      </option>
+                      <option
+                        value="replace"
+                      >
+                        replace
+                      </option>
+                    </select>
+                  </div>
+                  
+                  <div
+                    className="form"
+                  >
+                    <label
+                      htmlFor="type"
+                    >
+                      Issue
+                    </label>
+                    <textarea
+                      name="issue"
+                      onChange={[Function]}
+                      value=""
+                    />
+                  </div>
+                  
+                  <input
+                    className="btn btn-back"
+                    id="create-request"
+                    type="submit"
+                    value="submit"
+                  />
+                </form>
+              </div>,
+            ],
+            "className": "container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  className="btn btn-back"
+                  replace={false}
+                  to="/requests"
+                >
+                  <i
+                    className="fa fa-arrow-left"
+                  />
+                   Back to requests
+                </Link>,
+                "className": "back",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="fa fa-arrow-left"
+                    />,
+                    " Back to requests",
+                  ],
+                  "className": "btn btn-back",
+                  "replace": false,
+                  "to": "/requests",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "fa fa-arrow-left",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "i",
+                  },
+                  " Back to requests",
+                ],
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="title"
+                  >
+                    Add Request
+                  </div>,
+                  <form
+                    onSubmit={[Function]}
+                  >
+                    <div
+                      className="form"
+                    >
+                      <label>
+                        Product
+                      </label>
+                      <select
+                        id="my-product"
+                        name="product"
+                        onChange={[Function]}
+                        value="laptop"
+                      >
+                        <option
+                          value="laptop"
+                        >
+                          laptop
+                        </option>
+                        <option
+                          value="monitor"
+                        >
+                          monitor
+                        </option>
+                        <option
+                          value="chair"
+                        >
+                          chair
+                        </option>
+                        <option
+                          value="desk"
+                        >
+                          desk
+                        </option>
+                        <option
+                          value="charger"
+                        >
+                          charger
+                        </option>
+                        <option
+                          value="headphone"
+                        >
+                          headphone
+                        </option>
+                      </select>
+                    </div>
+                    
+                    <div
+                      className="form"
+                    >
+                      <label>
+                        Request Type
+                      </label>
+                      <select
+                        name="requestType"
+                        onChange={[Function]}
+                        value="maintenance"
+                      >
+                        <option
+                          value="maintenance"
+                        >
+                          maintenance
+                        </option>
+                        <option
+                          value="repair"
+                        >
+                          repair
+                        </option>
+                        <option
+                          value="replace"
+                        >
+                          replace
+                        </option>
+                      </select>
+                    </div>
+                    
+                    <div
+                      className="form"
+                    >
+                      <label
+                        htmlFor="type"
+                      >
+                        Issue
+                      </label>
+                      <textarea
+                        name="issue"
+                        onChange={[Function]}
+                        value=""
+                      />
+                    </div>
+                    
+                    <input
+                      className="btn btn-back"
+                      id="create-request"
+                      type="submit"
+                      value="submit"
+                    />
+                  </form>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Add Request",
+                    "className": "title",
+                  },
+                  "ref": null,
+                  "rendered": "Add Request",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="form"
+                      >
+                        <label>
+                          Product
+                        </label>
+                        <select
+                          id="my-product"
+                          name="product"
+                          onChange={[Function]}
+                          value="laptop"
+                        >
+                          <option
+                            value="laptop"
+                          >
+                            laptop
+                          </option>
+                          <option
+                            value="monitor"
+                          >
+                            monitor
+                          </option>
+                          <option
+                            value="chair"
+                          >
+                            chair
+                          </option>
+                          <option
+                            value="desk"
+                          >
+                            desk
+                          </option>
+                          <option
+                            value="charger"
+                          >
+                            charger
+                          </option>
+                          <option
+                            value="headphone"
+                          >
+                            headphone
+                          </option>
+                        </select>
+                      </div>,
+                      "",
+                      <div
+                        className="form"
+                      >
+                        <label>
+                          Request Type
+                        </label>
+                        <select
+                          name="requestType"
+                          onChange={[Function]}
+                          value="maintenance"
+                        >
+                          <option
+                            value="maintenance"
+                          >
+                            maintenance
+                          </option>
+                          <option
+                            value="repair"
+                          >
+                            repair
+                          </option>
+                          <option
+                            value="replace"
+                          >
+                            replace
+                          </option>
+                        </select>
+                      </div>,
+                      "",
+                      <div
+                        className="form"
+                      >
+                        <label
+                          htmlFor="type"
+                        >
+                          Issue
+                        </label>
+                        <textarea
+                          name="issue"
+                          onChange={[Function]}
+                          value=""
+                        />
+                      </div>,
+                      "",
+                      <input
+                        className="btn btn-back"
+                        id="create-request"
+                        type="submit"
+                        value="submit"
+                      />,
+                    ],
+                    "onSubmit": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <label>
+                            Product
+                          </label>,
+                          <select
+                            id="my-product"
+                            name="product"
+                            onChange={[Function]}
+                            value="laptop"
+                          >
+                            <option
+                              value="laptop"
+                            >
+                              laptop
+                            </option>
+                            <option
+                              value="monitor"
+                            >
+                              monitor
+                            </option>
+                            <option
+                              value="chair"
+                            >
+                              chair
+                            </option>
+                            <option
+                              value="desk"
+                            >
+                              desk
+                            </option>
+                            <option
+                              value="charger"
+                            >
+                              charger
+                            </option>
+                            <option
+                              value="headphone"
+                            >
+                              headphone
+                            </option>
+                          </select>,
+                        ],
+                        "className": "form",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Product",
+                          },
+                          "ref": null,
+                          "rendered": "Product",
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <option
+                                value="laptop"
+                              >
+                                laptop
+                              </option>,
+                              <option
+                                value="monitor"
+                              >
+                                monitor
+                              </option>,
+                              <option
+                                value="chair"
+                              >
+                                chair
+                              </option>,
+                              <option
+                                value="desk"
+                              >
+                                desk
+                              </option>,
+                              <option
+                                value="charger"
+                              >
+                                charger
+                              </option>,
+                              <option
+                                value="headphone"
+                              >
+                                headphone
+                              </option>,
+                            ],
+                            "id": "my-product",
+                            "name": "product",
+                            "onChange": [Function],
+                            "value": "laptop",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "laptop",
+                                "value": "laptop",
+                              },
+                              "ref": null,
+                              "rendered": "laptop",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "monitor",
+                                "value": "monitor",
+                              },
+                              "ref": null,
+                              "rendered": "monitor",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "chair",
+                                "value": "chair",
+                              },
+                              "ref": null,
+                              "rendered": "chair",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "desk",
+                                "value": "desk",
+                              },
+                              "ref": null,
+                              "rendered": "desk",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "charger",
+                                "value": "charger",
+                              },
+                              "ref": null,
+                              "rendered": "charger",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "headphone",
+                                "value": "headphone",
+                              },
+                              "ref": null,
+                              "rendered": "headphone",
+                              "type": "option",
+                            },
+                          ],
+                          "type": "select",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <label>
+                            Request Type
+                          </label>,
+                          <select
+                            name="requestType"
+                            onChange={[Function]}
+                            value="maintenance"
+                          >
+                            <option
+                              value="maintenance"
+                            >
+                              maintenance
+                            </option>
+                            <option
+                              value="repair"
+                            >
+                              repair
+                            </option>
+                            <option
+                              value="replace"
+                            >
+                              replace
+                            </option>
+                          </select>,
+                        ],
+                        "className": "form",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Request Type",
+                          },
+                          "ref": null,
+                          "rendered": "Request Type",
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <option
+                                value="maintenance"
+                              >
+                                maintenance
+                              </option>,
+                              <option
+                                value="repair"
+                              >
+                                repair
+                              </option>,
+                              <option
+                                value="replace"
+                              >
+                                replace
+                              </option>,
+                            ],
+                            "name": "requestType",
+                            "onChange": [Function],
+                            "value": "maintenance",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "maintenance",
+                                "value": "maintenance",
+                              },
+                              "ref": null,
+                              "rendered": "maintenance",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "repair",
+                                "value": "repair",
+                              },
+                              "ref": null,
+                              "rendered": "repair",
+                              "type": "option",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "replace",
+                                "value": "replace",
+                              },
+                              "ref": null,
+                              "rendered": "replace",
+                              "type": "option",
+                            },
+                          ],
+                          "type": "select",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <label
+                            htmlFor="type"
+                          >
+                            Issue
+                          </label>,
+                          <textarea
+                            name="issue"
+                            onChange={[Function]}
+                            value=""
+                          />,
+                        ],
+                        "className": "form",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Issue",
+                            "htmlFor": "type",
+                          },
+                          "ref": null,
+                          "rendered": "Issue",
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "name": "issue",
+                            "onChange": [Function],
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "textarea",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "btn btn-back",
+                        "id": "create-request",
+                        "type": "submit",
+                        "value": "submit",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "form",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

@@ -8,7 +8,7 @@ import { fetchUserSingleRequest } from '../../actions/request';
 import { updateUserRequest } from '../../actions/updateRequest';
 import { fetchAllRequests } from '../../actions/requests';
 
-class UpdateRequest extends Component {
+export class UpdateRequest extends Component {
   constructor() {
     super();
     this.state = {
@@ -101,7 +101,7 @@ class UpdateRequest extends Component {
             <form onSubmit={ this.handleUpdate }>
               <div className="form">
                 <label>Product</label>
-                <select name="product" value={ product } onChange={ this.handleChange }>
+                <select name="product" value={ product } onChange={ this.handleChange } id="my-product">
                   <option value="laptop">laptop</option>
                   <option value="monitor">monitor</option>
                   <option value="chair">chair</option>
@@ -127,7 +127,7 @@ class UpdateRequest extends Component {
               </div>
               { errors ? (<div className="error-message">{ errors }</div>) : '' }
 
-              <input type="submit" value="submit" className="btn btn-back" />
+              <input type="submit" value="submit" className="btn btn-back" id="update-request"/>
             </form>
           </div>
         </div>
