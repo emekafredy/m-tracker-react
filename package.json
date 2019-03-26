@@ -4,11 +4,12 @@
   "description": "A company app that helps employees forward maintenance/repair requests to the maintenance department",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage",
+    "test": "jest --verbose --coverage  --testPathPattern src/tests",
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "heroku-postbuild": "npm run build",
-    "start": "serve -s dist/"
+    "start": "serve -s dist/",
+    "e2e": "mocha -r esm --timeout 10000 ./end2end/__tests__"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,10 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-spread": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "chromedriver": "^2.46.0",
     "classnames": "^2.2.6",
-    "dotenv": "^6.1.0",
+    "dotenv": "^7.0.0",
+    "dotenv-webpack": "^1.7.0",
     "jsonwebtoken": "^8.3.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.5.1",
@@ -42,6 +45,7 @@
     "redux": "^4.0.1",
     "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
     "serve": "^10.0.2",
     "sweetalert": "^2.1.2"
   },
@@ -53,12 +57,13 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
+    "esm": "^3.2.20",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.12.1",
     "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.2.1"
   }
 }

@@ -54,6 +54,7 @@ export class Login extends Component {
 
   render() {
     const errors = this.state;
+    console.log('URL', process.env.APP_URL);
     return (
       <div className="signUp">
         <div className="card">
@@ -70,7 +71,7 @@ export class Login extends Component {
               value={ this.state.email }
               onChange={ this.handleChange }
             />
-            { errors.errors.email ? (<div className="error-message">{ errors.errors.email }</div>) : '' }
+            { errors.errors.email ? (<div className="error-message" id="emailError">{ errors.errors.email }</div>) : '' }
 
             <input
               className={classnames('input-class', {
@@ -81,7 +82,7 @@ export class Login extends Component {
               value={ this.state.password }
               onChange={ this.handleChange }
             />
-            { errors.errors.password ? (<div className="error-message">{ errors.errors.password }</div>) : '' }
+            { errors.errors.password ? (<div className="error-message" id="passwordError">{ errors.errors.password }</div>) : '' }
 
             <input type="submit" value="Login" id="submit"/> 
 

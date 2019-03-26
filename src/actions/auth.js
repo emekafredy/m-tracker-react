@@ -9,6 +9,7 @@ import { SET_CURRENT_USER } from '../actionTypes/auth.types';
 
 // Register User
 export const registerUser = (userData) => dispatch => {
+  console.log('app url', process.env.APP_URL);
   return axios
     .post(`${API}/api/v1/auth/signup`, userData)
     .then(response => {
