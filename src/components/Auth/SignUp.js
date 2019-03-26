@@ -75,7 +75,7 @@ export class SignUp extends Component {
               value={ this.state.firstName }
               onChange={ this.handleChange }
             />
-            { errors.firstName ? (<div className="error-message">{ errors.firstName }</div>) : '' }
+            { errors.firstName ? (<div className="error-message" id="firstNameError">{ errors.firstName }</div>) : '' }
 
             <input
             className={classnames('input-class', {
@@ -86,7 +86,7 @@ export class SignUp extends Component {
             value={ this.state.lastName }
             onChange={ this.handleChange }
             />
-            { errors.lastName ? (<div className="error-message">{ errors.lastName }</div>) : '' }
+            { errors.lastName ? (<div className="error-message" id="lasstNameError">{ errors.lastName }</div>) : '' }
       
             <input
             className={classnames('input-class', {
@@ -97,7 +97,7 @@ export class SignUp extends Component {
             value={ this.state.email }
             onChange={ this.handleChange }
             />
-            { errors.email ? (<div className="error-message">{ errors.email }</div>) : '' }
+            { errors.email ? (<div className="error-message" id="emailError">{ errors.email }</div>) : '' }
 
             <input
             className={classnames('input-class', {
@@ -108,7 +108,7 @@ export class SignUp extends Component {
             value={ this.state.password }
             onChange={ this.handleChange }
             />
-            { errors.password ? (<div className="error-message">{ errors.password }</div>) : '' }
+            { errors.password ? (<div className="error-message" id="passwordError">{ errors.password }</div>) : '' }
 
             <input type="submit" value="Register" id="register"/>
           </form>

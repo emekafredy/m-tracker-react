@@ -40,7 +40,7 @@ export class Navbar extends Component {
     const menu = (
       <div className="nav-links">
         <Link to="/register" className="auth-links">Sign Up</Link>
-        <Link to="/login" className="auth-links">Login</Link>
+        <Link to="/login" className="auth-links" id="loginLink">Login</Link>
       </div> 
     );
 
