@@ -4,12 +4,12 @@
   "description": "A company app that helps employees forward maintenance/repair requests to the maintenance department",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage  --testPathPattern src/tests",
+    "test": "jest -u --verbose --coverage  --testPathPattern src/tests",
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "heroku-postbuild": "npm run build",
     "start": "serve -s dist/",
-    "e2e": "mocha -r esm --timeout 10000 ./end2end/__tests__"
+    "e2e": "mocha -r esm --timeout 40000 ./end2end/__tests__/index.js"
   },
   "repository": {
     "type": "git",

@@ -99,9 +99,9 @@ export class CreateRequest extends Component {
 
             <div className="form">
               <label htmlFor="type">Issue</label>
-              <textarea name="issue" value={this.state.issue} onChange={ this.handleChange } />
+              <textarea name="issue" value={this.state.issue} onChange={ this.handleChange } id="issueDescription"/>
             </div>
-            { errors.Issue ? (<div className="error-message">{ errors.Issue }</div>) : '' }
+            { errors.Issue ? (<div className="error-message" id="issuesError">{ errors.Issue }</div>) : '' }
 
             <input type="submit" value="submit" className="btn btn-back" id="create-request"/>
           </form>

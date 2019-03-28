@@ -54,8 +54,7 @@ describe('SignUp Test', () => {
     assert.equal(emailErrMsg, 'Your email is invalid');
   });
 
-  it('Throws an error when the password has less than 6 characters', async () => {
-    
+  it('Throws an error when the password has less than 6 characters', async () => {   
     await driver.findElement(By.id('email')).clear();
     await driver.findElement(By.id('email')).sendKeys(getRandomMail());
     await driver.findElement(By.id('password')).clear();

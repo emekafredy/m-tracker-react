@@ -123,7 +123,7 @@ export class UpdateRequest extends Component {
 
               <div className="form">
                 <label htmlFor="type">Issue</label>
-                <textarea name="issue" value={issue} onChange={ this.handleChange } />
+                <textarea name="issue" value={issue} onChange={ this.handleChange } id="issueDescription"/>
               </div>
               { errors ? (<div className="error-message">{ errors }</div>) : '' }
 

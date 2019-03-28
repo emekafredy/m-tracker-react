@@ -93,14 +93,15 @@ export class Requests extends Component {
             <tbody id="table-body">
               {data && data.map(request => {
                 const { requestid, product, requesttype, requeststatus, userid, firstname, lastname } = request;
+                const reqId = `request-${requestid}`;
                 return (
-                  <tr key={requestid}>
+                  <tr key={requestid} id={reqId}>
                     { user.isadmin ?  <td data-label="User ID">{userid}</td> : null }
                     { user.isadmin ?  <td data-label="Name">{ firstname + ' ' + lastname }</td> : null }
-                    <td data-label="Product">{product}</td>
-                    <td data-label="Request Type">{requesttype}</td>
-                    <td data-label="Status">{requeststatus}</td>
-                    <td data-label="Details">
+                    <td data-label="Product" id="product-type">{product}</td>
+                    <td data-label="Request Type" id="request-type">{requesttype}</td>
+                    <td data-label="Status" id="product-status">{requeststatus}</td>
+                    <td data-label="Details" id="product-details">
                       <Link className="btn btn-details" to={`/request/${requestid}`}> details </Link>
                     </td>
                     { 

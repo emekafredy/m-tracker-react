@@ -137,13 +137,13 @@ export class SingleRequest extends Component {
                 <img src={ data && data[0].imageurl } alt="" className="single-req-img"/>
               </div>
             </div>
-            <div className="column">
-              <p className="para"> <label>Request ID</label> : <span> { data && data[0].requestid } </span></p>
-              <p className="para"> <label>Product</label> : <span>{ data && data[0].product }</span></p><br/>
-              <p className="para"> <label>Request Date</label> : <span>{ data && data[0].requestdate }</span></p>
-              <p className="para"> <label>Request type</label> : <span>{ data && data[0].requesttype }</span></p>
-              <p className="para"> <label>Isssue</label>: <br/> <span> { data && data[0].issue } </span></p>
-              <p className="para"> <label>Request status</label> : <span>{ data && data[0].requeststatus }</span></p>
+            <div className="column" id="main-request-details">
+              <p className="para" id="request-id"> <label>Request ID</label> : <span> { data && data[0].requestid } </span></p>
+              <p className="para" id="product-type"> <label>Product</label> : <span>{ data && data[0].product }</span></p><br/>
+              <p className="para" id="request-date"> <label>Request Date</label> : <span>{ data && data[0].requestdate }</span></p>
+              <p className="para" id="request-type"> <label>Request type</label> : <span>{ data && data[0].requesttype }</span></p>
+              <p className="para" id="issue-description"> <label>Isssue</label>: <br/> <span> { data && data[0].issue } </span></p>
+              <p className="para" id="request-status"> <label>Request status</label> : <span>{ data && data[0].requeststatus }</span></p>
               {
                 data && data[0].requeststatus === 'approved' ?
                 <p className="para"> <label>Approved Date</label> : 
@@ -167,7 +167,7 @@ export class SingleRequest extends Component {
               <div className="btn-div float-right">
                 {
                   data && data[0].requeststatus === 'pending' && !user.isadmin ? 
-                  <Link className="btn btn-details btn-margin" to={`/request/${data && data[0].requestid}/edit`}>
+                  <Link className="btn btn-details btn-margin" to={`/request/${data && data[0].requestid}/edit`} id="request-update">
                     <i className="fa fa-pencil-square-o"></i> Edit Request
                   </Link> : null
                 }
