@@ -62,6 +62,7 @@ ShallowWrapper {
         >
           <Link
             className="auth-links"
+            id="createRequestBtn"
             replace={false}
             to="/new"
           >
@@ -227,6 +228,7 @@ ShallowWrapper {
           "children": Array [
             <Link
               className="auth-links"
+              id="createRequestBtn"
               replace={false}
               to="/new"
             >
@@ -276,6 +278,7 @@ ShallowWrapper {
                 " Create new request",
               ],
               "className": "auth-links",
+              "id": "createRequestBtn",
               "replace": false,
               "to": "/new",
             },
@@ -410,6 +413,7 @@ ShallowWrapper {
           >
             <Link
               className="auth-links"
+              id="createRequestBtn"
               replace={false}
               to="/new"
             >
@@ -575,6 +579,7 @@ ShallowWrapper {
             "children": Array [
               <Link
                 className="auth-links"
+                id="createRequestBtn"
                 replace={false}
                 to="/new"
               >
@@ -624,6 +629,7 @@ ShallowWrapper {
                   " Create new request",
                 ],
                 "className": "auth-links",
+                "id": "createRequestBtn",
                 "replace": false,
                 "to": "/new",
               },

@@ -169,6 +169,7 @@ ShallowWrapper {
                   Issue
                 </label>
                 <textarea
+                  id="issueDescription"
                   name="issue"
                   onChange={[Function]}
                   value=""
@@ -342,6 +343,7 @@ ShallowWrapper {
                     Issue
                   </label>
                   <textarea
+                    id="issueDescription"
                     name="issue"
                     onChange={[Function]}
                     value=""
@@ -508,6 +510,7 @@ ShallowWrapper {
                       Issue
                     </label>
                     <textarea
+                      id="issueDescription"
                       name="issue"
                       onChange={[Function]}
                       value=""
@@ -625,6 +628,7 @@ ShallowWrapper {
                         Issue
                       </label>
                       <textarea
+                        id="issueDescription"
                         name="issue"
                         onChange={[Function]}
                         value=""
@@ -954,6 +958,7 @@ ShallowWrapper {
                           Issue
                         </label>,
                         <textarea
+                          id="issueDescription"
                           name="issue"
                           onChange={[Function]}
                           value=""
@@ -980,6 +985,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
+                          "id": "issueDescription",
                           "name": "issue",
                           "onChange": [Function],
                           "value": "",
@@ -1145,6 +1151,7 @@ ShallowWrapper {
                     Issue
                   </label>
                   <textarea
+                    id="issueDescription"
                     name="issue"
                     onChange={[Function]}
                     value=""
@@ -1318,6 +1325,7 @@ ShallowWrapper {
                       Issue
                     </label>
                     <textarea
+                      id="issueDescription"
                       name="issue"
                       onChange={[Function]}
                       value=""
@@ -1484,6 +1492,7 @@ ShallowWrapper {
                         Issue
                       </label>
                       <textarea
+                        id="issueDescription"
                         name="issue"
                         onChange={[Function]}
                         value=""
@@ -1601,6 +1610,7 @@ ShallowWrapper {
                           Issue
                         </label>
                         <textarea
+                          id="issueDescription"
                           name="issue"
                           onChange={[Function]}
                           value=""
@@ -1930,6 +1940,7 @@ ShallowWrapper {
                             Issue
                           </label>,
                           <textarea
+                            id="issueDescription"
                             name="issue"
                             onChange={[Function]}
                             value=""
@@ -1956,6 +1967,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
+                            "id": "issueDescription",
                             "name": "issue",
                             "onChange": [Function],
                             "value": "",

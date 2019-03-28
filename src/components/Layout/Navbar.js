@@ -22,7 +22,7 @@ export class Navbar extends Component {
 
     const authMenu = (
       <div className="nav-links">
-        <Link to="/new" className="auth-links">
+        <Link to="/new" className="auth-links" id="createRequestBtn">
           <i className="fa fa-plus"></i> Create new request
         </Link>
         <Link to="/" onClick={ this.onLogoutClick.bind(this) }
